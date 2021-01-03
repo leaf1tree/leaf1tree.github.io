@@ -1,0 +1,441 @@
+/*master styles*/
+body { 
+    margin: 0px; 
+}
+
+.container { 
+    display: grid; 
+    grid-template-columns: 1fr;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.05em; 
+}
+
+.content-wrapper { 
+    padding: 3vw;
+}
+
+
+/*nav styles*/
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw; 
+    padding-left: 3vw; 
+    padding-right: 3vw;
+}
+
+.left-side {
+    display: flex; 
+}
+
+.right-side {
+    display: flex;
+}
+
+.nav-wrapper > .left-side > div { 
+    font-size: 1em;
+}
+
+.nav-home-wrapper a { 
+    color: black;
+    text-decoration: none; 
+}
+
+.nav-wrapper > .right-side > div {
+    align-items: right;
+    margin-left: 20px; 
+    font-size: 1em; 
+}
+
+.nav-link-wrapper { 
+    height: 22px;
+    border-bottom: 3px solid transparent; 
+    transition: border-bottom 0.5s;
+}
+.nav-link-wrapper a { 
+    color: black;
+    text-decoration: none; 
+}
+.nav-link-wrapper:hover { 
+    border-bottom: 3px solid black;
+}
+
+/* Portfolio styles */
+.home-content-wrapper { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; 
+    padding: 3vw;
+}
+
+.portfolio-item-wrapper { 
+    position: relative;
+}
+
+.portfolio-img-background { 
+    height: 500px; 
+    width: 100%; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    transition: 1s; 
+}
+
+.text-wrapper { 
+    position: absolute; 
+    top: 0px; 
+    /* not sure what this really does other than center text on the grid cells */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    height: 100%; 
+    width: 100%; 
+    text-align: center; 
+}
+
+.text-wrapper .title a{ 
+    transition: 1s; 
+    color: transparent; 
+    text-decoration: none; 
+}
+.text-wrapper:hover .title a{ 
+    color: black; 
+    text-decoration: none; 
+}
+
+.portfolio-footer-wrapper { 
+    grid-column-start: 1; 
+    grid-column-end: span 2;
+    text-align: center; 
+}
+
+
+/* Portfolio animations*/ 
+.portfolio-item-wrapper:hover .portfolio-img-background { 
+    filter: opacity(10%); 
+}
+/*.img-lighten { 
+    transition: 1s; 
+    filter: opacity(50%); 
+}
+
+/*About page styles*/
+.two-column-wrapper { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-column-gap: 10px; 
+    grid-row-gap: 10px; 
+}
+
+.about-image-wrapper { 
+    grid-column-start: 1; 
+    grid-column-end: span 2; 
+}
+.about-image-wrapper img { 
+    width: 100%; 
+}
+
+.about-text-wrapper > .title-wrapper { 
+    font-size: 1.2em; 
+}
+
+.about-text-wrapper > .title-text { 
+    font-size: 2em; 
+}
+
+.about-text-wrapper > .text { 
+    font-size: 1.2em; 
+}
+
+.about-footer-wrapper { 
+    grid-column-start: 1; 
+    grid-column-end: span 2;
+    text-align: center; 
+}
+
+/*Contact styles*/
+.contact-column-wrapper { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 150px 100px;
+    height: 80vh;
+    padding: 3vw;
+    margin: 3vw; 
+    background-image: url(../leaf1tree.github.io/images/contact1.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.contact-header-wrapper { 
+    justify-content: center; 
+    text-align: center; 
+}
+.contact-header { 
+    font-size: 1.2em; 
+}
+.contact-content-wrapper { 
+    display: grid;    
+    height: 100px;  
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 30px;  
+    grid-column-gap: 10vh; 
+    margin: 10vh; 
+    transition: 1s;
+}
+.contact-content-wrapper:hover { 
+    background-color: white;
+}
+.contact-text-wrapper { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-header-text { 
+    font-weight: 600; 
+}
+
+/*Photography styles*/
+.photo-content-wrapper { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+.photo-text { 
+    font-size: 2em; 
+    text-align: center;  
+}
+.photo-image-wrapper img { 
+    height: 500px; 
+    width: 500px; 
+    object-fit: cover;
+    margin-bottom: 10px; 
+    margin-right: 10px; 
+}
+
+/*style styles*/
+.style-header-wrapper { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-row-gap: 30px; 
+    background-size: cover; 
+    background-position: top; 
+    background-repeat: no-repeat;
+}
+
+.style-header-text {
+    font-size: 2em; 
+}
+
+.style-text { 
+    font-size: 1.2em; 
+    grid-column-start: 2;
+    align-self: end; 
+}
+.style-text a { 
+    color: black;
+    text-decoration: none; 
+}
+.style-content-wrapper { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 40px; 
+}
+
+.style-source { 
+    position: absolute; 
+    padding-left: 10px; 
+    padding-top: 10px; 
+    color: gray; 
+
+}
+.style-image-wrapper > a > img { 
+    height: 500px; 
+    width: 500px; 
+    object-fit: cover;
+    margin-bottom: 10px; 
+    margin-right: 10px; 
+}
+
+.style-footer-wrapper { 
+    grid-column-start: 1; 
+    grid-column-end: span 2;
+    text-align: center; 
+}
+
+/*books styles*/
+.books-content-wrapper { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; 
+}
+
+.books-item-wrapper { 
+    position: relative; 
+}
+.books-image-background { 
+    height: 500px; 
+    width: 100%; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.books-title-wrapper { 
+    position: absolute; 
+    top: 0px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    height: 100%; 
+    width: 100%; 
+    text-align: center; 
+
+    font-size: 2em;
+    color: white;
+}
+.books-text-wrapper { 
+    position: absolute;
+    top: 100px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    height: 100%; 
+    width: 100%; 
+    text-align: center;
+    color: transparent; 
+    transition: 1s; 
+
+}
+.books-item-wrapper:hover .books-text-wrapper { 
+    color: white; 
+}
+
+/*Food styles*/
+.food-header-wrapper { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding-top: 30vh; 
+    padding-bottom: 30vh; 
+}
+
+.food-header-wrapper > div { 
+    text-align: center; 
+    color: white; 
+}
+
+.food-h1 { 
+    font-size: 3em;     
+}
+
+.food-h2 { 
+    font-size: 3em;
+    
+}
+.food-h3 { 
+    font-size: 2em; 
+    
+}
+
+.food-h4 {
+    font-size: 1.2em; 
+    
+}
+.food-people-wrapper { 
+    display: grid; 
+    grid-template-columns: 350px 350px; 
+    background-color:  	#eed9c4; 
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; 
+    padding-top: 5vh; 
+    padding-bottom: 5vh; 
+    justify-content: space-evenly; 
+}
+
+.food-people-header { 
+    grid-column-start: 1; 
+    grid-column-end: span 2; 
+    margin-bottom: 5vh; 
+    text-align: center; 
+    justify-content: top; 
+}
+
+.food-people-header div { 
+    margin-bottom: 30px; 
+}
+
+.food-item-wrapper > a > img { 
+    height: 350px; 
+    width: 100%; 
+    object-fit: cover; 
+
+}
+
+.food-item-wrapper div { 
+    margin-bottom: 10px; 
+    text-align: center;
+}
+
+.food-dishes-wrapper { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    background-color:  	#d3d7d0; 
+    padding-top: 5vh; 
+    padding-bottom: 30vh; 
+    justify-content: space-evenly; 
+}
+
+.food-dishes-header { 
+    margin-bottom: 5vh; 
+    text-align: center; 
+    justify-content: top; 
+}
+
+.food-dishes-header div { 
+    margin-bottom: 30px; 
+}
+
+.food-dish-wrapper { 
+    position: relative; 
+}
+.food-dish-background { 
+    height: 75vh; 
+    width: 100%; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    transition: 1s; 
+}
+
+.food-dish-text { 
+    position: absolute; 
+    top: 0px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    height: 100%; 
+    width: 100%; 
+    text-align: center; 
+    color: transparent;
+    transition: 1s; 
+}
+
+.food-dish-wrapper:hover .food-dish-text {
+    color: black; 
+}
+
+.food-dish-wrapper:hover .food-dish-background { 
+    opacity: 15%; 
+}
+
+
+
+
